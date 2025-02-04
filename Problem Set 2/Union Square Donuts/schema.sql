@@ -10,7 +10,7 @@ CREATE TABLE donuts(
     "name" TEXT,
     "gluten-free" NUMERIC,
     "price" REAL,
-    PRIMARY KEY ("id"),
+    PRIMARY KEY ("id")
 );
 CREATE TABLE orders(
     "order_number" INTEGER,
@@ -31,7 +31,7 @@ CREATE TABLE customers(
         "ingredient_id" INTEGER,
          "donut_id" INTEGER,
           PRIMARY KEY ("ingredient_id","donut_id"),
-           FOREIGN KEY ("ingredient_id") REFERENCES "ingredients" ("id")
+           FOREIGN KEY ("ingredient_id") REFERENCES "ingredients" ("id"),
           FOREIGN KEY ("donut_id") REFERENCES "donuts" ("id")
  );
 CREATE TABLE orders_donuts (
