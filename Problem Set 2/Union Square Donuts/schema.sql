@@ -40,6 +40,7 @@ CREATE TABLE customers(
 CREATE TABLE orders_donuts (
         "order_number" INTEGER,
         "donut_id" INTEGER,
+        PRIMARY KEY ("order_number","donut_id"),
         FOREIGN KEY ("order_number") REFERENCES "orders" ("order_no"),
         FOREIGN KEY ("donut_id") REFERENCES "donuts" ("id")
     );
