@@ -10,6 +10,7 @@ CREATE TABLE check_in (
     "passener_id" INTEGER,
     "flight_id" INTEGER,
     "date" NUMERIC DEFAULT CURRENT_TIMESTAMP,
+    primary key ("id"),
     FOREIGN KEY ("passener_id") REFERENCES "passengers"("id"),
      FOREIGN KEY ("flight_id") REFERENCES "flights"("id")
 );
