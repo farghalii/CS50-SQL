@@ -23,12 +23,12 @@ CREATE TABLE orders(
 );
 CREATE TABLE customers(
         "id" INTEGER,
-        "order_id" INTEGER,
+        "order_number" INTEGER,
         "first_name" TEXT,
         "last_name" TEXT,
         "history" NUMERIC,
         PRIMARY KEY ("id"),
-         FOREIGN KEY ("order_id") REFERENCES "orders" ("id")
+         FOREIGN KEY ("order_number") REFERENCES "orders" ("order_number")
 );
  CREATE TABLE ingredients_of_donut(
         "ingredient_id" INTEGER,
